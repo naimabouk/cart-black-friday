@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hassiba Orange shop </title>
+  </head>
+  <body class="bg-gray-100 h-screen flex-col lg:flex-row flex">
+    <!-- Begin Main -->
+    <main class="w-full flex flex-col lg:flex-row p-4">
+      <div class="flex flex-col w-full lg:w-1/2">
+        <div class="flex flex-col justify-center mb-4">
+          <!-- Left section for logo and title -->
+          <img
+            src="public/images/shopping-cart.png"
+            alt="Logo"
+            class="h-20 w-40 mr-4"
+          />
+        </div>
+        <div class="flex-1 flex items-center justify-center mb-6">
+          <img
+            src="public/images/logo.png"
+            alt="black friday image"
+            class="w-full h-auto max-w-md"
+          />
+        </div>
+      </div>
+      <div
+        class="bg-white shadow-lg rounded-lg p-6 w-full lg:w-1/2 flex flex-col justify-between h-full"
+      >
+        <!-- Shopping Cart Items -->
+        <div class="flex flex-col overflow-y-auto flex-1">
+          <div
+            id="empty-cart"
+            class="flex flex-col text-center md:flex-row items-center justify-center w-full"
+          >
+            <img
+              class="object-cover size-56"
+              src="public/images/empty-cart.svg"
+              alt="empty-cart"
+            />
+            <div>
+              <h2 class="font-bold uppercase text-xl">no items in cart!</h2>
+              <a
+                href="#"
+                class="capitalize font-bold text-xl hover:underline text-red-600"
+                >go back</a
+              >
+            </div>
+          </div>
+          <div
+            class="cart-item flex md:flex-row flex-col justify-between items-center border-b border-gray-300 pb-4 pr-4 mb-4"
+          >
+            <img
+              src="public/images/led.jpeg"
+              alt="Graphics Card"
+              class="w-24 h-24 object-cover rounded"
+            />
+            <div class="flex-1 mx-4">
+              <h2 class="text-xl font-semibold">Graphics Card</h2>
+              <p class="text-gray-600">$499.99</p>
+            </div>
+            <div class="flex items-center">
+              <button
+                class="bg-gray-200 decrease-quantity text-gray-700 p-2 rounded-full mr-2"
+                title="Decrease Quantity"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <input
+                type="number"
+                value="1"
+                class="w-12 text-center border border-gray-300 bg-gray-100 text-gray-700 rounded"
+                readonly
+              />
+              <button
+                class="bg-gray-200 increase-quantity text-gray-700 p-2 rounded-full ml-2"
+                title="Increase Quantity"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+              <button
+                class="ml-2 text-red-500 text-lg p-3 transition-all duration-100 hover:scale-150 delete-item"
+                title="Remove from cart"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+              <button
+                class="ml-2 text-gray-200 hover:scale-150 hover:text-pink-500 transition-all duration-100 text-lg p-3 favorite-item"
+                title="Add to favorites"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="cart-item flex md:flex-row flex-col justify-between items-center border-b border-gray-300 pb-4 pr-4 mb-4"
+          >
+            <img
+              src="public/images/pcb.jpeg"
+              alt="Motherboard"
+              class="w-24 h-24 object-cover rounded"
+            />
+            <div class="flex-1 mx-4">
+              <h2 class="text-xl font-semibold">Motherboard</h2>
+              <p class="text-gray-600">$199.99</p>
+            </div>
+            <div class="flex items-center">
+              <button
+                class="bg-gray-200 decrease-quantity text-gray-700 p-2 rounded-full mr-2"
+                title="Decrease Quantity"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <input
+                type="number"
+                value="1"
+                class="w-12 text-center border border-gray-300 bg-gray-100 text-gray-700 rounded"
+                readonly
+              />
+              <button
+                class="bg-gray-200 text-gray-700 p-2 increase-quantity rounded-full ml-2"
+                title="Increase Quantity"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+              <button
+                class="ml-2 text-red-500 text-lg p-3 transition-all duration-100 hover:scale-150 delete-item"
+                title="Remove from cart"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+              <button
+                class="ml-2 text-gray-200 hover:scale-150 hover:text-pink-500 transition-all duration-100 text-lg p-3 favorite-item"
+                title="Add to favorites"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="cart-item flex md:flex-row flex-col justify-between items-center border-b border-gray-300 pb-4 pr-4 mb-4"
+          >
+            <img
+              src="public/images/led.jpeg"
+              alt="CPU"
+              class="w-24 h-24 object-cover rounded"
+            />
+            <div class="flex-1 mx-4">
+              <h2 class="text-xl font-semibold">CPU</h2>
+              <p class="text-gray-600">$299.99</p>
+            </div>
+            <div class="flex items-center">
+              <button
+                class="bg-gray-200 text-gray-700 decrease-quantity p-2 rounded-full mr-2"
+                title="Decrease Quantity"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <input
+                type="number"
+                value="1"
+                class="w-12 text-center border border-gray-300 bg-gray-100 text-gray-700 rounded"
+                readonly
+              />
+              <button
+                class="bg-gray-200 text-gray-700 p-2 increase-quantity rounded-full ml-2"
+                title="Increase Quantity"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+              <button
+                class="ml-2 text-red-500 text-lg p-3 transition-all duration-100 hover:scale-150 delete-item"
+                title="Remove from cart"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+              <button
+                class="ml-2 text-gray-200 hover:scale-150 hover:text-pink-500 transition-all duration-100 text-lg p-3 favorite-item"
+                title="Add to favorites"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="cart-item flex md:flex-row flex-col justify-between items-center border-b border-gray-300 pb-4 pr-4 mb-4"
+          >
+            <img
+              src="public/images/robot car.jpeg"
+              alt="Power Supply"
+              class="w-24 h-24 object-cover rounded"
+            />
+            <div class="flex-1 mx-4">
+              <h2 class="text-xl font-semibold">Power Supply</h2>
+              <p class="text-gray-600">$89.99</p>
+            </div>
+            <div class="flex items-center">
+              <button
+                class="bg-gray-200 text-gray-700 decrease-quantity p-2 rounded-full mr-2"
+                title="Decrease Quantity"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <input
+                type="number"
+                value="1"
+                class="w-12 text-center border border-gray-300 bg-gray-100 text-gray-700 rounded"
+                readonly
+              />
+              <button
+                class="bg-gray-200 text-gray-700 p-2 increase-quantity rounded-full ml-2"
+                title="Increase Quantity"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+              <button
+                class="ml-2 text-red-500 text-lg p-3 transition-all duration-100 hover:scale-150 delete-item"
+                title="Remove from cart"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+              <button
+                class="ml-2 text-gray-200 hover:scale-150 hover:text-pink-500 transition-all duration-100 text-lg p-3 favorite-item"
+                title="Add to favorites"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+          <div
+            class="cart-item flex md:flex-row flex-col justify-between items-center border-b border-gray-300 pb-4 pr-4 mb-4"
+          >
+            <img
+              src="public/images/ssd.jpg"
+              alt="SSD"
+              class="w-24 h-24 object-cover rounded"
+            />
+            <div class="flex-1 mx-4">
+              <h2 class="text-xl font-semibold">SSD</h2>
+              <p class="text-gray-600">$129.99</p>
+            </div>
+            <div class="flex items-center">
+              <button
+                class="bg-gray-200 text-gray-700 p-2 decrease-quantity rounded-full mr-2"
+                title="Decrease Quantity"
+              >
+                <i class="fas fa-minus"></i>
+              </button>
+              <input
+                type="number"
+                value="1"
+                class="w-12 text-center border border-gray-300 bg-gray-100 text-gray-700 rounded"
+                readonly
+              />
+              <button
+                class="bg-gray-200 text-gray-700 p-2 increase-quantity rounded-full ml-2"
+                title="Increase Quantity"
+              >
+                <i class="fas fa-plus"></i>
+              </button>
+              <button
+                class="ml-2 text-red-500 text-lg p-3 transition-all duration-100 hover:scale-150 delete-item"
+                title="Remove from cart"
+              >
+                <i class="fas fa-trash"></i>
+              </button>
+              <button
+                class="ml-2 text-gray-200 hover:scale-150 hover:text-pink-500 transition-all duration-100 text-lg p-3 favorite-item"
+                title="Add to favorites"
+              >
+                <i class="fas fa-heart"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Total Price -->
+        <div class="flex justify-between items-center mt-4">
+          <h2 class="text-xl font-semibold">Total Price:</h2>
+          <p id="total-price" class="font-bold text-gray-600">$0.00</p>
+        </div>
+        <!-- Checkout Button -->
+        <div class="mt-4">
+            <button
+              class="w-full bg-black text-white py-2 rounded hover:bg-gray-800"
+            >
+              Checkout
+            </button>
+          </div>
+          
+    </main>
+    <!-- End Main -->
+    <!-- Begin Scripts -->
+    <script
+      src="https://kit.fontawesome.com/985cabe830.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+    <!-- End Scripts -->
+  </body>
+</html>
